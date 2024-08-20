@@ -45,11 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FlipCharacter()
     {
-        // need to know what the last x was that isn't zero 
-        if (_moveInput.x != 0)
-        {
-            float lastMovement = _moveInput.x;
-            transform.localScale = new Vector3(lastMovement > 0 ? -1 : 1, 1, 1);
-        }
+        
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - GameManager.Instance.Player.position;
+        transform.localScale = new Vector3(mousePos.x > 0 ? -1 : 1, 1, 1);
     }
 }

@@ -8,7 +8,8 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     [Header("Settings")]
-    [SerializeField] private float _attackRadius;
+    [SerializeField] private LayerMask _enemyMask;
+    [SerializeField] private Vector2 _attackSize;
     [SerializeField] private float _attackCooldown;
     private float _lastAttackTime;
 
@@ -28,8 +29,7 @@ public class MeleeWeapon : MonoBehaviour
     private void Attack()
     {
         _animator.Play("Attack");
-
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, _attackRadius);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, _attackSize, transform.rotation.z, _enemyMask);
 
         foreach (Collider2D collider in colliders)
         {
@@ -48,7 +48,7 @@ public class MeleeWeapon : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _attackRadius);
+        Gizmos.DrawWireCube((Vector2)transform.position, _attackSize);
     }
 
 }
