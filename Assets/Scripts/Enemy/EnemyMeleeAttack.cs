@@ -27,7 +27,8 @@ public class EnemyMeleeAttack : MonoBehaviour
         {
             if (Utils.IsReady(ref _lastAttackTime, _attackCooldown))
             {
-                GameManager.Instance.Player.TakeDamage(1);
+                IAttackable attackable = collider.GetComponent<IAttackable>();
+                attackable.TakeDamage(1);
             }
         }
     }

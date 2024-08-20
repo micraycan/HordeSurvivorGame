@@ -12,9 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _moveInput;
 
-    private void Awake()
+    private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        FlipCharacter();
     }
 
     private void FixedUpdate()
@@ -36,5 +41,15 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         _rb.velocity = _moveInput * _moveSpeed;
+    }
+
+    private void FlipCharacter()
+    {
+        // need to know what the last x was that isn't zero 
+        if (_moveInput.x != 0)
+        {
+            float lastMovement = _moveInput.x;
+            transform.localScale = new Vector3(lastMovement > 0 ? -1 : 1, 1, 1);
+        }
     }
 }

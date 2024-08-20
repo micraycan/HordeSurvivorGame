@@ -10,9 +10,9 @@ public class EnemyMovement : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _moveSpeed;
 
-    private void Awake()
+    private void Start()
     {
-        _player = GameManager.Instance.Player.transform;
+        _player = GameManager.Instance.Player;
         _rb = GetComponent<Rigidbody2D>();
     }
 

@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour, IAttackable
     private EnemyHealth _health;
     private EnemyMovement _movement;
 
-    private void Awake()
+    private void Start()
     {
         _health = GetComponent<EnemyHealth>();
         _movement = GetComponent<EnemyMovement>();

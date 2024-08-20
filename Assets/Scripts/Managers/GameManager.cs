@@ -3,12 +3,12 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [Header("References")]
-    [SerializeField] private Player _player;
+    [SerializeField] private Transform _player;
 
     [Header("Settings")]
     [SerializeField] private int _frameRate;
 
-    public Player Player => _player;
+    public Transform Player => _player;
 
     protected override void Awake()
     {
