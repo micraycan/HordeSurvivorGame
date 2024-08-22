@@ -11,6 +11,7 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private LayerMask _enemyMask;
     [SerializeField] private Vector2 _attackSize;
     [SerializeField] private float _attackCooldown;
+    [SerializeField] private int _weaponDamage;
     private float _lastAttackTime;
 
     private void Update()
@@ -36,7 +37,8 @@ public class MeleeWeapon : MonoBehaviour
             IAttackable attackable = collider.GetComponent<IAttackable>();
             if (attackable != null)
             {
-                attackable.TakeDamage(1);
+                int damage = CalculateWeaponDamage(out bool isCrit);
+                attackable.TakeDamage(damage, isCrit);
             }
         }
     }
@@ -51,4 +53,11 @@ public class MeleeWeapon : MonoBehaviour
         Gizmos.DrawWireCube((Vector2)transform.position, _attackSize);
     }
 
+    private int CalculateWeaponDamage(out bool isCrit)
+    {
+        float critStat = AttributeManager.Instance.GetStat(Attribute.CritChance);
+        isCrit = Random.value <= (critStat / 100);
+        int damageStat = (int)AttributeManager.Instance.GetStat(Attribute.Damage);
+        return isCrit ? damageStat * 2 : damageStat;
+    }
 }

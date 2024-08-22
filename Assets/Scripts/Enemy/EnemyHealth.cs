@@ -22,7 +22,5 @@ public class EnemyHealth : MonoBehaviour
         {
             // TODO: trigger event for onEnemyDeath
         }
-
-        Debug.Log($"Enemy takes {damage} damage, health = {_health}");
     }
 }

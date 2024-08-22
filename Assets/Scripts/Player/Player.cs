@@ -16,25 +16,11 @@ public class Player : MonoBehaviour, IAttackable
     }
 
     /// <summary>
-    /// Public facing method for PlayerHealth.TakeDamage().
+    /// Public facing method for player taking damage
     /// </summary>
     /// <param name="damage"></param>
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool isCrit = false)
     {
         _health.TakeDamage(damage);
-    }
-
-    private void Attack()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 1);
-
-        foreach (Collider2D collider in colliders)
-        {
-            IAttackable attackable = collider.GetComponent<IAttackable>();
-            if (attackable != null)
-            {
-                // attack
-            }
-        }
     }
 }

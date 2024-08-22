@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private int _maxHealth;
+    private int _maxHealth;
     private int _health;
 
     private void Start()
     {
+        _maxHealth = (int)AttributeManager.Instance.GetStat(Attribute.MaxHealth);
         _health = _maxHealth;
     }
 
@@ -20,9 +21,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (_health <= 0)
         {
-            // TODO: trigger event for onPlayerDeath
+            // player death action
         }
 
-        Debug.Log($"Player takes {damage} damage, health = {_health}");
+        GameActions.PlayerHealthChanged?.Invoke(_health);
     }
 }

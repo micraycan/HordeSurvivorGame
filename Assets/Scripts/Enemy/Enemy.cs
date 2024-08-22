@@ -15,8 +15,14 @@ public class Enemy : MonoBehaviour, IAttackable
         _movement = GetComponent<EnemyMovement>();
     }
 
-    public void TakeDamage(int damage)
+    /// <summary>
+    /// Public facing call for enemy taking damage
+    /// </summary>
+    /// <param name="damage"></param>
+    /// <param name="isCrit"></param>
+    public void TakeDamage(int damage, bool isCrit = false)
     {
         _health.TakeDamage(damage);
+        GameActions.EnemyDamaged?.Invoke(damage, transform, isCrit);
     }
 }

@@ -542,6 +542,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: heart_empty
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebfb404a7ac1b944aadd140b5f15d2a
+      internalID: 880083001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_full
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243034f85f643da4ea8332dc61b62896
+      internalID: -1121189633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_half
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76f8f24e308b6046b99a7d83e57768d
+      internalID: -678994751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armor_full
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999654a3cdd75ae4bb541b06c33866d3
+      internalID: -316692006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armor_half
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68f3b453938e644eb84c0e99c20002c
+      internalID: -166494913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armor_empty
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889d7084ed958d542a8c1c0785f37811
+      internalID: 799885108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -553,6 +679,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      The Roguelike 1-13-6 Alpha_10: 1505511797
+      The Roguelike 1-13-6 Alpha_3: 330957370
+      The Roguelike 1-13-6 Alpha_4: -1333869567
+      The Roguelike 1-13-6 Alpha_5: 519341558
+      The Roguelike 1-13-6 Alpha_6: -341631707
+      The Roguelike 1-13-6 Alpha_8: 1920920218
+      The Roguelike 1-13-6 Alpha_9: 1746995222
+      armor_empty: 799885108
+      armor_full: -316692006
+      armor_half: -166494913
       bush_1: -917294470
       bush_2: -1202215661
       enemy_1: 64990996
@@ -570,6 +706,9 @@ TextureImporter:
       ground_4: -206647467
       ground_5: 1164892942
       ground_6: 1600064339
+      heart_empty: 880083001
+      heart_full: -1121189633
+      heart_half: -678994751
       plant: -245058048
       player_1: -772427053
       rock: 922541730
