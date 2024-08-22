@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         if (_health <= 0)
         {
             GameActions.EnemyDeath?.Invoke(transform.position);
+            Destroy(gameObject);
         }
     }
 }
