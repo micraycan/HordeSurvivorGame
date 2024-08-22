@@ -10,5 +10,8 @@ public static class GameActions
 
     // enemy actions
     public static Action<int, Transform, bool> EnemyDamaged;
-    public static Action EnemyDeath;
+    public static Action<Vector2> EnemyDeath;
+
+    // drop actions
+    public static Action<XpOrb> XpCollected;
 }

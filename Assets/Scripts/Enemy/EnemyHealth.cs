@@ -20,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (_health <= 0)
         {
-            // TODO: trigger event for onEnemyDeath
+            GameActions.EnemyDeath?.Invoke(transform.position);
         }
     }
 }

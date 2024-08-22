@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class XpOrb : ItemDrop
 {
-    
+    protected override void Collected()
+    {
+        GameActions.XpCollected?.Invoke(this);
+    }
 }

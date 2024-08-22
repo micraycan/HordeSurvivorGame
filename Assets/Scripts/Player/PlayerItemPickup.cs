@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerItemPickup : MonoBehaviour
 {
     [Header("Settings")]
+    [SerializeField] private LayerMask _collectableMask;
     private float _pickupRadius;
 
     private void Start()
@@ -19,13 +20,13 @@ public class PlayerItemPickup : MonoBehaviour
 
     private void TryPickup()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, _pickupRadius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, _pickupRadius, _collectableMask);
 
         foreach (Collider2D collider in colliders)
         {
             if (collider != null)
             {
-                collider.GetComponent<ICollectable>().Collect();
+                collider.GetComponent<ICollectable>().Collect(transform);
             }
         }
     }

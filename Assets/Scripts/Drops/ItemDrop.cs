@@ -2,22 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDrop : MonoBehaviour, ICollectable
+public abstract class ItemDrop : MonoBehaviour, ICollectable
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Settings")]
+    [SerializeField] private float _collectionSpeed;
+
+    public void Collect(Transform player)
     {
-        
+        MoveTowardsCollector(player.position);
     }
 
-    // Update is called once per frame
-    void Update()
+    protected abstract void Collected();
+
+    private void MoveTowardsCollector(Vector2 collector)
     {
-        
+        transform.position = Vector2.Lerp(transform.position, collector, _collectionSpeed * Time.deltaTime);
     }
 
-    public void Collect()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-
+        if (collider.CompareTag("Player"))
+        {
+            Collected();
+        }
     }
 }
