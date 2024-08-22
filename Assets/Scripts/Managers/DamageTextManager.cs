@@ -14,7 +14,12 @@ public class DamageTextManager : MonoBehaviour
 
     private void Start()
     {
-        _textPool = new ObjectPool<DamageText>(CreateFunction, ActionOnGet, ActionOnRelease, ActionOnDestroy);
+        _textPool = Utils.CreateObjectPool(
+                () => Instantiate(_textPrefab, transform),
+                text => text.gameObject.SetActive(true),
+                text => text.gameObject.SetActive(false),
+                text => Destroy(text.gameObject)
+            );
     }
 
     private void OnEnemyDamaged(int damage, Transform enemy, bool isCrit)
@@ -27,9 +32,4 @@ public class DamageTextManager : MonoBehaviour
 
         LeanTween.delayedCall(1, () => _textPool.Release(textInstance));
     }
-
-    private DamageText CreateFunction() => Instantiate(_textPrefab, transform);
-    private void ActionOnGet(DamageText text) => text.gameObject.SetActive(true);
-    private void ActionOnRelease(DamageText text) => text.gameObject.SetActive(false);
-    private void ActionOnDestroy(DamageText text) => Destroy(text.gameObject);
 }

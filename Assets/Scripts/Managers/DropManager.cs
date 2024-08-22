@@ -23,13 +23,13 @@ public class DropManager : MonoBehaviour
 
     private void Start()
     {
-        _xpPool = new ObjectPool<XpOrb>(CreateFunction, ActionOnGet, ActionOnRelease, ActionOnDestroy);
+        _xpPool = Utils.CreateObjectPool(
+                () => Instantiate(_xpPrefab, transform),
+                xpOrb => xpOrb.gameObject.SetActive(true),
+                xpOrb => xpOrb.gameObject.SetActive(false),
+                xpOrb => Destroy(xpOrb.gameObject)
+            );
     }
-
-    private XpOrb CreateFunction() => Instantiate(_xpPrefab, transform);
-    private void ActionOnGet(XpOrb xpOrb) => xpOrb.gameObject.SetActive(true);
-    private void ActionOnRelease(XpOrb xpOrb) => xpOrb.gameObject.SetActive(false);
-    private void ActionOnDestroy(XpOrb xpOrb) => Destroy(xpOrb);
 
     private void OnEnemyDeath(Vector2 enemyPos)
     {
