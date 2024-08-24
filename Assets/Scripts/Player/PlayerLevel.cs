@@ -30,7 +30,7 @@ public class PlayerLevel : MonoBehaviour
             float overleveledDiff = 
             _level++;
             _xpValue -= _xpNeeded;
-            _xpNeeded = _level * 10;
+            _xpNeeded = _level * 5;
 
             // LEVEL UP ACTION
         }
