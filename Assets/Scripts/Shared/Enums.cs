@@ -4,5 +4,6 @@ public enum Attribute
     Speed,
     Damage,
     CritChance,
-    PickupRadius
+    PickupRadius,
+    ExpGain
 }

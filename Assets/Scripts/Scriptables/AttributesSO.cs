@@ -35,5 +35,6 @@ public class AttributeDictionary : Dictionary<Attribute, float>
         this[Attribute.Damage] = 0;
         this[Attribute.CritChance] = 0;
         this[Attribute.PickupRadius] = 0;
+        this[Attribute.ExpGain] = 0;
     }
 }

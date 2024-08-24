@@ -14,4 +14,7 @@ public static class GameActions
 
     // drop actions
     public static Action<XpOrb> XpCollected;
+
+    // UI actions
+    public static Action<float, float, int> XpUpdated;
 }
