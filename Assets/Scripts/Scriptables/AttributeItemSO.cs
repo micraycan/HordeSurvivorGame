@@ -9,4 +9,9 @@ public class AttributeItemSO : ItemSO, IUpgrade
     [SerializeField] private Attribute _attribute;
     [SerializeField] private float _value;
     [SerializeField] private bool _isMult;
+
+    public override void Collect()
+    {
+        // collect
+    }
 }

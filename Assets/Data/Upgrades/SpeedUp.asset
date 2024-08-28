@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01f6a1aad514464cae96f150119d945, type: 3}
-  m_Name: MaxHealthUp
+  m_Name: SpeedUp
   m_EditorClassIdentifier: 
-  _sprite: {fileID: -1121189633, guid: 111bdd02242dad644bf078bf4fd41f40, type: 3}
-  _name: Max Health ++
-  _description: Gain an extra heart container, increase max health +2
+  _sprite: {fileID: 1763350162, guid: 111bdd02242dad644bf078bf4fd41f40, type: 3}
+  _name: Speed %+
+  _description: Increase movement speed 5%
   _rarity: 25
-  _attribute: 0
-  _value: 2
-  _isMult: 0
+  _attribute: 1
+  _value: 5
+  _isMult: 1

@@ -8,7 +8,11 @@ public class GameManager : Singleton<GameManager>
     [Header("Settings")]
     [SerializeField] private int _frameRate;
 
+    [Header("Upgrade Options")]
+    [SerializeField] private ItemSO[] _upgrades;
+
     public Transform Player => _player;
+    public ItemSO[] Upgrades => _upgrades;
 
     protected override void Awake()
     {

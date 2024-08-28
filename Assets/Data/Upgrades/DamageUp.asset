@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: -1202215661, guid: 111bdd02242dad644bf078bf4fd41f40, type: 3}
   _name: Damage +
-  _description: Increase damage
+  _description: Increase damage +1
+  _rarity: 50
   _attribute: 2
   _value: 1
   _isMult: 0

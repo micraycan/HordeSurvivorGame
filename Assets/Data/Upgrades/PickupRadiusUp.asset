@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01f6a1aad514464cae96f150119d945, type: 3}
-  m_Name: MaxHealthUp
+  m_Name: PickupRadiusUp
   m_EditorClassIdentifier: 
-  _sprite: {fileID: -1121189633, guid: 111bdd02242dad644bf078bf4fd41f40, type: 3}
-  _name: Max Health ++
-  _description: Gain an extra heart container, increase max health +2
-  _rarity: 25
-  _attribute: 0
-  _value: 2
-  _isMult: 0
+  _sprite: {fileID: -1349446393, guid: a44ffb45e68202641b1d2cc38211136a, type: 3}
+  _name: Pickup Radius %+
+  _description: Increase pickup radius 5%
+  _rarity: 50
+  _attribute: 4
+  _value: 5
+  _isMult: 1

@@ -11410,6 +11410,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 216249160}
   _frameRate: 60
+  _upgrades:
+  - {fileID: 11400000, guid: e224ef3438e76124fb4ae80a39d00f99, type: 2}
+  - {fileID: 11400000, guid: 3124710f45f7a894d814b391e555752e, type: 2}
+  - {fileID: 11400000, guid: f4c12ba08193ba04399b12b585cdefbf, type: 2}
+  - {fileID: 11400000, guid: 03b00af57005fab4c84c62d9945cceca, type: 2}
+  - {fileID: 11400000, guid: 5bb84c7dbc396c641896e51b01a54c41, type: 2}
+  - {fileID: 11400000, guid: 0d59ec45e7392014fb660d1eaa974bac, type: 2}
+  - {fileID: 11400000, guid: 75fc7bcdbff6d9c48a6c35bdc84a6029, type: 2}
 --- !u!1001 &1908932611
 PrefabInstance:
   m_ObjectHideFlags: 0

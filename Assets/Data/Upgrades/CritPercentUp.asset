@@ -15,6 +15,7 @@ MonoBehaviour:
   _sprite: {fileID: -31082586, guid: 030038059ce164c4f8242edfe5e3d848, type: 3}
   _name: Crit Chance %+
   _description: Increase crit chance 5%
+  _rarity: 50
   _attribute: 3
   _value: 5
   _isMult: 1

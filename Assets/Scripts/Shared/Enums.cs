@@ -5,5 +5,6 @@ public enum Attribute
     Damage,
     CritChance,
     PickupRadius,
-    ExpGain
+    ExpGain,
+    Luck
 }
